@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 230, 23%, 95%; /* change */
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0, 0%, 96%; /* change */
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 20, 95%, 50%;  /* change */
+    --primary-foreground: 0, 0%, 100%;  /* change  */
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0, 0%, 85%; /* change */
+    --input: 0, 0%, 96%; /* change */
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  body {
+    @apply bg-background ;
+  }
+}
+/* -------- common section ----------------*/
+.width{
+  @apply 2xl:w-[70%] lg:w-[90%] w-full mx-auto
+}
+.bg-light{
+  @apply bg-[#F85606]/30
+}
+
+.text-md{
+  @apply lg:text-xl text-[16px]
+}
+.text-lg{
+  @apply lg:text-2xl text-xl
+}
+.text-xlg{
+  @apply lg:text-3xl text-2xl
+}
+.center{
+  @apply flex items-center justify-between;
+}
+.centerAll{
+  @apply flex items-center justify-center;
+}
+.input{
+  @apply bg-transparent border-[1px] w-full rounded-full border-primary outline-0 px-5 py-6 text-md placeholder:sm:text-xl placeholder:text-[16px] placeholder:text-gray-500 text-gray-500 disabled:border-slate-300
+}
+.profileInput{
+  @apply bg-transparent border-[1px] w-full   rounded-lg outline-0 px-3 text-md placeholder:sm:text-xl placeholder:text-[16px] placeholder:text-gray-500 text-gray-500  
+}
+
+.textArea{
+  @apply bg-transparent border-[1px]  w-full rounded-lg outline-0 px-5 py-6 text-md placeholder:sm:text-xl placeholder:text-[16px] placeholder:text-gray-500 text-gray-500
+}
+.cusBtn{
+  @apply bg-primary w-full py-6 text-center rounded-full text-md
+}
+
+
+.slider{
+  @apply h-4 w-4  rounded-full 
+}
+
+.slider-btn{
+  @apply  absolute  bottom-0 bg-primary w-8 h-16 sm:flex hidden items-center justify-center  transform -translate-y-1/2 top-1/2 cursor-pointer
+}
+.card{
+  @apply my-5 grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2  gap-3 shadow-3xl  p-7 rounded-2xl
+}
+
+.footerTitle{
+  @apply xl:text-2xl text-xl  font-bold
+}
+
+
+/* product */
+.active {
+  border: 2px solid #e77600;
+}
+
+
+.left_2 img {
+  width: 500px;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+.delivery-card-active-tag {
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 15px solid #007787;
+  border-top:15px solid #007787;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
